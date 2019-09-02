@@ -1,6 +1,6 @@
 {
   "name": "p3_client",
-  "version": "v1",
+  "version": "1.0.0",
   "description": "RC_Portal",
   "license": "GNU GPL version 2",
   "main": "src/index.js",
