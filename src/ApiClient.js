@@ -338,6 +338,10 @@
    * @returns A value of the specified type.
    */
   exports.prototype.deserialize = function deserialize(response, returnType) {
+    console.log('The return type is ')
+    console.log(returnType)
+    console.log('The response is ')
+    console.log(response)
     if (response == null || returnType == null || response.status == 204) {
       console.log('No response to deserialize');
       return null;
@@ -479,6 +483,8 @@
             console.log('In the Promise with response')
             console.log(response)
             var data = _this.deserialize(response, returnType);
+            console.log('the data that was returned')
+            console.log(data)
             if (_this.enableCookies && typeof window === 'undefined'){
               _this.agent.saveCookies(response);
             }
