@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getOrgNamesList"></a>
 # **getOrgNamesList**
-> getOrgNamesList(opts)
+> [GetOrgNames] getOrgNamesList(opts)
 
 
 
@@ -31,8 +31,8 @@ var apiInstance = new PortalApi.GetOrgNamesApi();
 var opts = { 
   'search': "search_example" // String | 
 };
-apiInstance.getOrgNamesList(opts).then(function() {
-  console.log('API called successfully.');
+apiInstance.getOrgNamesList(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
 });
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[GetOrgNames]**](GetOrgNames.md)
 
 ### Authorization
 

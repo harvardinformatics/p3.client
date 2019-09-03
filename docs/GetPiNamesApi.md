@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getPiNamesList"></a>
 # **getPiNamesList**
-> getPiNamesList(opts)
+> [GetPiNames] getPiNamesList(opts)
 
 
 
@@ -31,8 +31,8 @@ var apiInstance = new PortalApi.GetPiNamesApi();
 var opts = { 
   'search': "search_example" // String | 
 };
-apiInstance.getPiNamesList(opts).then(function() {
-  console.log('API called successfully.');
+apiInstance.getPiNamesList(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
 });
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[GetPiNames]**](GetPiNames.md)
 
 ### Authorization
 

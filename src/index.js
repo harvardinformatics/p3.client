@@ -17,12 +17,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/App', 'model/AppTag', 'model/Build', 'model/BuildStack', 'model/GetBasicsByLogin', 'model/OfficeHoursSignIn', 'api/AppTagsApi', 'api/AppsApi', 'api/BuildStacksApi', 'api/BuildsApi', 'api/GetBasicsByLoginApi', 'api/GetOrgNamesApi', 'api/GetPiNamesApi', 'api/OfficeHoursSignInsApi'], factory);
+    define(['ApiClient', 'model/App', 'model/AppTag', 'model/Build', 'model/BuildStack', 'model/GetBasicsByLogin', 'model/GetOrgNames', 'model/GetPiNames', 'model/OfficeHoursSignIn', 'api/AppTagsApi', 'api/AppsApi', 'api/BuildStacksApi', 'api/BuildsApi', 'api/GetBasicsByLoginApi', 'api/GetOrgNamesApi', 'api/GetPiNamesApi', 'api/OfficeHoursSignInsApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/App'), require('./model/AppTag'), require('./model/Build'), require('./model/BuildStack'), require('./model/GetBasicsByLogin'), require('./model/OfficeHoursSignIn'), require('./api/AppTagsApi'), require('./api/AppsApi'), require('./api/BuildStacksApi'), require('./api/BuildsApi'), require('./api/GetBasicsByLoginApi'), require('./api/GetOrgNamesApi'), require('./api/GetPiNamesApi'), require('./api/OfficeHoursSignInsApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/App'), require('./model/AppTag'), require('./model/Build'), require('./model/BuildStack'), require('./model/GetBasicsByLogin'), require('./model/GetOrgNames'), require('./model/GetPiNames'), require('./model/OfficeHoursSignIn'), require('./api/AppTagsApi'), require('./api/AppsApi'), require('./api/BuildStacksApi'), require('./api/BuildsApi'), require('./api/GetBasicsByLoginApi'), require('./api/GetOrgNamesApi'), require('./api/GetPiNamesApi'), require('./api/OfficeHoursSignInsApi'));
   }
-}(function(ApiClient, App, AppTag, Build, BuildStack, GetBasicsByLogin, OfficeHoursSignIn, AppTagsApi, AppsApi, BuildStacksApi, BuildsApi, GetBasicsByLoginApi, GetOrgNamesApi, GetPiNamesApi, OfficeHoursSignInsApi) {
+}(function(ApiClient, App, AppTag, Build, BuildStack, GetBasicsByLogin, GetOrgNames, GetPiNames, OfficeHoursSignIn, AppTagsApi, AppsApi, BuildStacksApi, BuildsApi, GetBasicsByLoginApi, GetOrgNamesApi, GetPiNamesApi, OfficeHoursSignInsApi) {
   'use strict';
 
   /**
@@ -87,6 +87,16 @@
      * @property {module:model/GetBasicsByLogin}
      */
     GetBasicsByLogin: GetBasicsByLogin,
+    /**
+     * The GetOrgNames model constructor.
+     * @property {module:model/GetOrgNames}
+     */
+    GetOrgNames: GetOrgNames,
+    /**
+     * The GetPiNames model constructor.
+     * @property {module:model/GetPiNames}
+     */
+    GetPiNames: GetPiNames,
     /**
      * The OfficeHoursSignIn model constructor.
      * @property {module:model/OfficeHoursSignIn}

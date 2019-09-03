@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/GetPiNames'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('../model/GetPiNames'));
   } else {
     // Browser globals (root is window)
     if (!root.PortalApi) {
       root.PortalApi = {};
     }
-    root.PortalApi.GetPiNamesApi = factory(root.PortalApi.ApiClient);
+    root.PortalApi.GetPiNamesApi = factory(root.PortalApi.ApiClient, root.PortalApi.GetPiNames);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, GetPiNames) {
   'use strict';
 
   /**
@@ -53,7 +53,7 @@
      * Return PI first name last name for autocomplete list.  Only active user records returned.
      * @param {Object} opts Optional parameters
      * @param {String} opts.search 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/GetPiNames>} and HTTP response
      */
     this.getPiNamesListWithHttpInfo = function(opts) {
       opts = opts || {};
@@ -75,7 +75,7 @@
       var authNames = ['token'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = null;
+      var returnType = [GetPiNames];
 
       return this.apiClient.callApi(
         '/get-pi-names/', 'GET',
@@ -88,7 +88,7 @@
      * Return PI first name last name for autocomplete list.  Only active user records returned.
      * @param {Object} opts Optional parameters
      * @param {String} opts.search 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/GetPiNames>}
      */
     this.getPiNamesList = function(opts) {
       return this.getPiNamesListWithHttpInfo(opts)

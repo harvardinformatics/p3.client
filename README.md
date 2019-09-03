@@ -164,6 +164,8 @@ Class | Method | HTTP request | Description
  - [PortalApi.Build](docs/Build.md)
  - [PortalApi.BuildStack](docs/BuildStack.md)
  - [PortalApi.GetBasicsByLogin](docs/GetBasicsByLogin.md)
+ - [PortalApi.GetOrgNames](docs/GetOrgNames.md)
+ - [PortalApi.GetPiNames](docs/GetPiNames.md)
  - [PortalApi.OfficeHoursSignIn](docs/OfficeHoursSignIn.md)
 
 

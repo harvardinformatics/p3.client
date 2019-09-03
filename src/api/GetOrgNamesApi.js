@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/GetOrgNames'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('../model/GetOrgNames'));
   } else {
     // Browser globals (root is window)
     if (!root.PortalApi) {
       root.PortalApi = {};
     }
-    root.PortalApi.GetOrgNamesApi = factory(root.PortalApi.ApiClient);
+    root.PortalApi.GetOrgNamesApi = factory(root.PortalApi.ApiClient, root.PortalApi.GetOrgNames);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, GetOrgNames) {
   'use strict';
 
   /**
@@ -53,7 +53,7 @@
      * Return org names for autocomplete list.  Department names are followed by Schools, Museums, Institutes, and Centers
      * @param {Object} opts Optional parameters
      * @param {String} opts.search 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/GetOrgNames>} and HTTP response
      */
     this.getOrgNamesListWithHttpInfo = function(opts) {
       opts = opts || {};
@@ -75,7 +75,7 @@
       var authNames = ['token'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = null;
+      var returnType = [GetOrgNames];
 
       return this.apiClient.callApi(
         '/get-org-names/', 'GET',
@@ -88,7 +88,7 @@
      * Return org names for autocomplete list.  Department names are followed by Schools, Museums, Institutes, and Centers
      * @param {Object} opts Optional parameters
      * @param {String} opts.search 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/GetOrgNames>}
      */
     this.getOrgNamesList = function(opts) {
       return this.getOrgNamesListWithHttpInfo(opts)
