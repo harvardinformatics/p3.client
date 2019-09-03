@@ -476,6 +476,8 @@
           reject(error);
         } else {
           try {
+            console.log('In the Promise with response')
+            console.log(response)
             var data = _this.deserialize(response, returnType);
             if (_this.enableCookies && typeof window === 'undefined'){
               _this.agent.saveCookies(response);
