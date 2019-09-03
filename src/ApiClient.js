@@ -339,16 +339,21 @@
    */
   exports.prototype.deserialize = function deserialize(response, returnType) {
     if (response == null || returnType == null || response.status == 204) {
+      console.log('No response to deserialize');
       return null;
     }
     // Rely on SuperAgent for parsing response body.
     // See http://visionmedia.github.io/superagent/#parsing-response-bodies
     var data = response.body;
+    console.log('Response body');
     if (data == null || (typeof data === 'object' && typeof data.length === 'undefined' && !Object.keys(data).length)) {
       // SuperAgent does not always produce a body; use the unparsed response as a fallback
       data = response.text;
     }
-    return exports.convertToType(data, returnType);
+    let result = exports.convertToType(data, returnType);
+    console.log('Response result');
+    console.log(result);
+    return result;
   };
 
   /**
