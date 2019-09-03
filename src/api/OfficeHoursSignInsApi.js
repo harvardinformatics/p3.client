@@ -1,5 +1,5 @@
 /**
- * p3 client
+ * Portal API
  * RC Portal
  *
  * OpenAPI spec version: v1
@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/OfficeHoursSignIn'));
   } else {
     // Browser globals (root is window)
-    if (!root.P3Client) {
-      root.P3Client = {};
+    if (!root.PortalApi) {
+      root.PortalApi = {};
     }
-    root.P3Client.OfficeHoursSignInsApi = factory(root.P3Client.ApiClient, root.P3Client.OfficeHoursSignIn);
+    root.PortalApi.OfficeHoursSignInsApi = factory(root.PortalApi.ApiClient, root.PortalApi.OfficeHoursSignIn);
   }
 }(this, function(ApiClient, OfficeHoursSignIn) {
   'use strict';

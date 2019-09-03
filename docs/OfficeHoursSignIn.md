@@ -1,4 +1,4 @@
-# P3Client.OfficeHoursSignIn
+# PortalApi.OfficeHoursSignIn
 
 ## Properties
 Name | Type | Description | Notes

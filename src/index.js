@@ -1,5 +1,5 @@
 /**
- * p3 client
+ * Portal API
  * RC Portal
  *
  * OpenAPI spec version: v1
@@ -17,12 +17,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/App', 'model/AppTag', 'model/Build', 'model/BuildStack', 'model/OfficeHoursSignIn', 'api/AppTagsApi', 'api/AppsApi', 'api/BuildStacksApi', 'api/BuildsApi', 'api/GetBasicsByLoginApi', 'api/GetOrgNamesApi', 'api/GetPiNamesApi', 'api/OfficeHoursSignInsApi'], factory);
+    define(['ApiClient', 'model/App', 'model/AppTag', 'model/Build', 'model/BuildStack', 'model/GetBasicsByLogin', 'model/OfficeHoursSignIn', 'api/AppTagsApi', 'api/AppsApi', 'api/BuildStacksApi', 'api/BuildsApi', 'api/GetBasicsByLoginApi', 'api/GetOrgNamesApi', 'api/GetPiNamesApi', 'api/OfficeHoursSignInsApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/App'), require('./model/AppTag'), require('./model/Build'), require('./model/BuildStack'), require('./model/OfficeHoursSignIn'), require('./api/AppTagsApi'), require('./api/AppsApi'), require('./api/BuildStacksApi'), require('./api/BuildsApi'), require('./api/GetBasicsByLoginApi'), require('./api/GetOrgNamesApi'), require('./api/GetPiNamesApi'), require('./api/OfficeHoursSignInsApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/App'), require('./model/AppTag'), require('./model/Build'), require('./model/BuildStack'), require('./model/GetBasicsByLogin'), require('./model/OfficeHoursSignIn'), require('./api/AppTagsApi'), require('./api/AppsApi'), require('./api/BuildStacksApi'), require('./api/BuildsApi'), require('./api/GetBasicsByLoginApi'), require('./api/GetOrgNamesApi'), require('./api/GetPiNamesApi'), require('./api/OfficeHoursSignInsApi'));
   }
-}(function(ApiClient, App, AppTag, Build, BuildStack, OfficeHoursSignIn, AppTagsApi, AppsApi, BuildStacksApi, BuildsApi, GetBasicsByLoginApi, GetOrgNamesApi, GetPiNamesApi, OfficeHoursSignInsApi) {
+}(function(ApiClient, App, AppTag, Build, BuildStack, GetBasicsByLogin, OfficeHoursSignIn, AppTagsApi, AppsApi, BuildStacksApi, BuildsApi, GetBasicsByLoginApi, GetOrgNamesApi, GetPiNamesApi, OfficeHoursSignInsApi) {
   'use strict';
 
   /**
@@ -31,9 +31,9 @@
    * <p>
    * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
    * <pre>
-   * var P3Client = require('index'); // See note below*.
-   * var xxxSvc = new P3Client.XxxApi(); // Allocate the API class we're going to use.
-   * var yyyModel = new P3Client.Yyy(); // Construct a model instance.
+   * var PortalApi = require('index'); // See note below*.
+   * var xxxSvc = new PortalApi.XxxApi(); // Allocate the API class we're going to use.
+   * var yyyModel = new PortalApi.Yyy(); // Construct a model instance.
    * yyyModel.someProperty = 'someValue';
    * ...
    * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -45,8 +45,8 @@
    * <p>
    * A non-AMD browser application (discouraged) might do something like this:
    * <pre>
-   * var xxxSvc = new P3Client.XxxApi(); // Allocate the API class we're going to use.
-   * var yyy = new P3Client.Yyy(); // Construct a model instance.
+   * var xxxSvc = new PortalApi.XxxApi(); // Allocate the API class we're going to use.
+   * var yyy = new PortalApi.Yyy(); // Construct a model instance.
    * yyyModel.someProperty = 'someValue';
    * ...
    * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -82,6 +82,11 @@
      * @property {module:model/BuildStack}
      */
     BuildStack: BuildStack,
+    /**
+     * The GetBasicsByLogin model constructor.
+     * @property {module:model/GetBasicsByLogin}
+     */
+    GetBasicsByLogin: GetBasicsByLogin,
     /**
      * The OfficeHoursSignIn model constructor.
      * @property {module:model/OfficeHoursSignIn}

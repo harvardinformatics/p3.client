@@ -1,4 +1,4 @@
-# P3Client.GetBasicsByLoginApi
+# PortalApi.GetBasicsByLoginApi
 
 All URIs are relative to *http://localhost:8091/p3/api*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getBasicsByLoginList"></a>
 # **getBasicsByLoginList**
-> getBasicsByLoginList(opts)
+> [GetBasicsByLogin] getBasicsByLoginList(opts)
 
 
 
@@ -17,8 +17,8 @@ Return basic information (user full name, pi name, department, email ) given all
 
 ### Example
 ```javascript
-var P3Client = require('p3_client');
-var defaultClient = P3Client.ApiClient.instance;
+var PortalApi = require('portal_api');
+var defaultClient = PortalApi.ApiClient.instance;
 
 // Configure API key authorization: token
 var token = defaultClient.authentications['token'];
@@ -26,13 +26,13 @@ token.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //token.apiKeyPrefix = 'Token';
 
-var apiInstance = new P3Client.GetBasicsByLoginApi();
+var apiInstance = new PortalApi.GetBasicsByLoginApi();
 
 var opts = { 
   'login': "login_example" // String | 
 };
-apiInstance.getBasicsByLoginList(opts).then(function() {
-  console.log('API called successfully.');
+apiInstance.getBasicsByLoginList(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
 });
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[GetBasicsByLogin]**](GetBasicsByLogin.md)
 
 ### Authorization
 

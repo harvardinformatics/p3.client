@@ -1,4 +1,4 @@
-# P3Client.BuildStack
+# PortalApi.BuildStack
 
 ## Properties
 Name | Type | Description | Notes

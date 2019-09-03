@@ -1,5 +1,5 @@
 /**
- * p3 client
+ * Portal API
  * RC Portal
  *
  * OpenAPI spec version: v1
@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/GetBasicsByLogin'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('../model/GetBasicsByLogin'));
   } else {
     // Browser globals (root is window)
-    if (!root.P3Client) {
-      root.P3Client = {};
+    if (!root.PortalApi) {
+      root.PortalApi = {};
     }
-    root.P3Client.GetBasicsByLoginApi = factory(root.P3Client.ApiClient);
+    root.PortalApi.GetBasicsByLoginApi = factory(root.PortalApi.ApiClient, root.PortalApi.GetBasicsByLogin);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, GetBasicsByLogin) {
   'use strict';
 
   /**
@@ -53,7 +53,7 @@
      * Return basic information (user full name, pi name, department, email ) given all or part of a login
      * @param {Object} opts Optional parameters
      * @param {String} opts.login 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/GetBasicsByLogin>} and HTTP response
      */
     this.getBasicsByLoginListWithHttpInfo = function(opts) {
       opts = opts || {};
@@ -75,7 +75,7 @@
       var authNames = ['token'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = null;
+      var returnType = [GetBasicsByLogin];
 
       return this.apiClient.callApi(
         '/get-basics-by-login/', 'GET',
@@ -88,7 +88,7 @@
      * Return basic information (user full name, pi name, department, email ) given all or part of a login
      * @param {Object} opts Optional parameters
      * @param {String} opts.login 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/GetBasicsByLogin>}
      */
     this.getBasicsByLoginList = function(opts) {
       return this.getBasicsByLoginListWithHttpInfo(opts)

@@ -1,4 +1,4 @@
-# P3Client.BuildsApi
+# PortalApi.BuildsApi
 
 All URIs are relative to *http://localhost:8091/p3/api*
 
@@ -22,8 +22,8 @@ ViewSet for Builds
 
 ### Example
 ```javascript
-var P3Client = require('p3_client');
-var defaultClient = P3Client.ApiClient.instance;
+var PortalApi = require('portal_api');
+var defaultClient = PortalApi.ApiClient.instance;
 
 // Configure API key authorization: token
 var token = defaultClient.authentications['token'];
@@ -31,9 +31,9 @@ token.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //token.apiKeyPrefix = 'Token';
 
-var apiInstance = new P3Client.BuildsApi();
+var apiInstance = new PortalApi.BuildsApi();
 
-var data = new P3Client.Build(); // Build | 
+var data = new PortalApi.Build(); // Build | 
 
 apiInstance.buildsCreate(data).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -72,8 +72,8 @@ ViewSet for Builds
 
 ### Example
 ```javascript
-var P3Client = require('p3_client');
-var defaultClient = P3Client.ApiClient.instance;
+var PortalApi = require('portal_api');
+var defaultClient = PortalApi.ApiClient.instance;
 
 // Configure API key authorization: token
 var token = defaultClient.authentications['token'];
@@ -81,7 +81,7 @@ token.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //token.apiKeyPrefix = 'Token';
 
-var apiInstance = new P3Client.BuildsApi();
+var apiInstance = new PortalApi.BuildsApi();
 
 var id = 56; // Number | A unique integer value identifying this build.
 
@@ -122,8 +122,8 @@ ViewSet for Builds
 
 ### Example
 ```javascript
-var P3Client = require('p3_client');
-var defaultClient = P3Client.ApiClient.instance;
+var PortalApi = require('portal_api');
+var defaultClient = PortalApi.ApiClient.instance;
 
 // Configure API key authorization: token
 var token = defaultClient.authentications['token'];
@@ -131,7 +131,7 @@ token.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //token.apiKeyPrefix = 'Token';
 
-var apiInstance = new P3Client.BuildsApi();
+var apiInstance = new PortalApi.BuildsApi();
 apiInstance.buildsList().then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
@@ -166,8 +166,8 @@ ViewSet for Builds
 
 ### Example
 ```javascript
-var P3Client = require('p3_client');
-var defaultClient = P3Client.ApiClient.instance;
+var PortalApi = require('portal_api');
+var defaultClient = PortalApi.ApiClient.instance;
 
 // Configure API key authorization: token
 var token = defaultClient.authentications['token'];
@@ -175,11 +175,11 @@ token.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //token.apiKeyPrefix = 'Token';
 
-var apiInstance = new P3Client.BuildsApi();
+var apiInstance = new PortalApi.BuildsApi();
 
 var id = 56; // Number | A unique integer value identifying this build.
 
-var data = new P3Client.Build(); // Build | 
+var data = new PortalApi.Build(); // Build | 
 
 apiInstance.buildsPartialUpdate(id, data).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -219,8 +219,8 @@ ViewSet for Builds
 
 ### Example
 ```javascript
-var P3Client = require('p3_client');
-var defaultClient = P3Client.ApiClient.instance;
+var PortalApi = require('portal_api');
+var defaultClient = PortalApi.ApiClient.instance;
 
 // Configure API key authorization: token
 var token = defaultClient.authentications['token'];
@@ -228,7 +228,7 @@ token.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //token.apiKeyPrefix = 'Token';
 
-var apiInstance = new P3Client.BuildsApi();
+var apiInstance = new PortalApi.BuildsApi();
 
 var id = 56; // Number | A unique integer value identifying this build.
 
@@ -269,8 +269,8 @@ ViewSet for Builds
 
 ### Example
 ```javascript
-var P3Client = require('p3_client');
-var defaultClient = P3Client.ApiClient.instance;
+var PortalApi = require('portal_api');
+var defaultClient = PortalApi.ApiClient.instance;
 
 // Configure API key authorization: token
 var token = defaultClient.authentications['token'];
@@ -278,11 +278,11 @@ token.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //token.apiKeyPrefix = 'Token';
 
-var apiInstance = new P3Client.BuildsApi();
+var apiInstance = new PortalApi.BuildsApi();
 
 var id = 56; // Number | A unique integer value identifying this build.
 
-var data = new P3Client.Build(); // Build | 
+var data = new PortalApi.Build(); // Build | 
 
 apiInstance.buildsUpdate(id, data).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);

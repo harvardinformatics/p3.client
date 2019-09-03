@@ -1,5 +1,5 @@
 /**
- * p3 client
+ * Portal API
  * RC Portal
  *
  * OpenAPI spec version: v1
@@ -23,10 +23,10 @@
     module.exports = factory(require('superagent'), require('querystring'));
   } else {
     // Browser globals (root is window)
-    if (!root.P3Client) {
-      root.P3Client = {};
+    if (!root.PortalApi) {
+      root.PortalApi = {};
     }
-    root.P3Client.ApiClient = factory(root.superagent, root.querystring);
+    root.PortalApi.ApiClient = factory(root.superagent, root.querystring);
   }
 }(this, function(superagent, querystring) {
   'use strict';
@@ -338,26 +338,17 @@
    * @returns A value of the specified type.
    */
   exports.prototype.deserialize = function deserialize(response, returnType) {
-    console.log('The return type is ')
-    console.log(returnType)
-    console.log('The response is ')
-    console.log(response)
     if (response == null || returnType == null || response.status == 204) {
-      console.log('No response to deserialize');
       return null;
     }
     // Rely on SuperAgent for parsing response body.
     // See http://visionmedia.github.io/superagent/#parsing-response-bodies
     var data = response.body;
-    console.log('Response body');
     if (data == null || (typeof data === 'object' && typeof data.length === 'undefined' && !Object.keys(data).length)) {
       // SuperAgent does not always produce a body; use the unparsed response as a fallback
       data = response.text;
     }
-    let result = exports.convertToType(data, returnType);
-    console.log('Response result');
-    console.log(result);
-    return result;
+    return exports.convertToType(data, returnType);
   };
 
   /**
@@ -480,11 +471,7 @@
           reject(error);
         } else {
           try {
-            console.log('In the Promise with response')
-            console.log(response)
             var data = _this.deserialize(response, returnType);
-            console.log('the data that was returned')
-            console.log(data)
             if (_this.enableCookies && typeof window === 'undefined'){
               _this.agent.saveCookies(response);
             }

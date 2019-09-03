@@ -1,4 +1,4 @@
-# P3Client.GetPiNamesApi
+# PortalApi.GetPiNamesApi
 
 All URIs are relative to *http://localhost:8091/p3/api*
 
@@ -17,8 +17,8 @@ Return PI first name last name for autocomplete list.  Only active user records 
 
 ### Example
 ```javascript
-var P3Client = require('p3_client');
-var defaultClient = P3Client.ApiClient.instance;
+var PortalApi = require('portal_api');
+var defaultClient = PortalApi.ApiClient.instance;
 
 // Configure API key authorization: token
 var token = defaultClient.authentications['token'];
@@ -26,7 +26,7 @@ token.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //token.apiKeyPrefix = 'Token';
 
-var apiInstance = new P3Client.GetPiNamesApi();
+var apiInstance = new PortalApi.GetPiNamesApi();
 
 var opts = { 
   'search': "search_example" // String | 

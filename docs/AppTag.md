@@ -1,4 +1,4 @@
-# P3Client.AppTag
+# PortalApi.AppTag
 
 ## Properties
 Name | Type | Description | Notes

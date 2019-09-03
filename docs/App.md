@@ -1,4 +1,4 @@
-# P3Client.App
+# PortalApi.App
 
 ## Properties
 Name | Type | Description | Notes

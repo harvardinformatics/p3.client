@@ -1,5 +1,5 @@
 /**
- * p3 client
+ * Portal API
  * RC Portal
  *
  * OpenAPI spec version: v1
@@ -23,10 +23,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/AppTag'));
   } else {
     // Browser globals (root is window)
-    if (!root.P3Client) {
-      root.P3Client = {};
+    if (!root.PortalApi) {
+      root.PortalApi = {};
     }
-    root.P3Client.AppTagsApi = factory(root.P3Client.ApiClient, root.P3Client.AppTag);
+    root.PortalApi.AppTagsApi = factory(root.PortalApi.ApiClient, root.PortalApi.AppTag);
   }
 }(this, function(ApiClient, AppTag) {
   'use strict';
