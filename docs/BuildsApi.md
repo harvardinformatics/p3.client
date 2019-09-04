@@ -135,8 +135,7 @@ var apiInstance = new PortalApi.BuildsApi();
 
 var opts = { 
   'page': 56, // Number | A page number within the paginated result set.
-  'pageSize': 56, // Number | Number of results to return per page.
-  'search': "search_example" // String | 
+  'pageSize': 56 // Number | Number of results to return per page.
 };
 apiInstance.buildsList(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -152,7 +151,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| A page number within the paginated result set. | [optional] 
  **pageSize** | **Number**| Number of results to return per page. | [optional] 
- **search** | **String**|  | [optional] 
 
 ### Return type
 

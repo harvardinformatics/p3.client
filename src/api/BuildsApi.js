@@ -155,7 +155,6 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page A page number within the paginated result set.
      * @param {Number} opts.pageSize Number of results to return per page.
-     * @param {String} opts.search 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2003} and HTTP response
      */
     this.buildsListWithHttpInfo = function(opts) {
@@ -168,7 +167,6 @@
       var queryParams = {
         'page': opts['page'],
         'page_size': opts['pageSize'],
-        'search': opts['search'],
       };
       var collectionQueryParams = {
       };
@@ -194,7 +192,6 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page A page number within the paginated result set.
      * @param {Number} opts.pageSize Number of results to return per page.
-     * @param {String} opts.search 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2003}
      */
     this.buildsList = function(opts) {
