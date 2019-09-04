@@ -148,6 +148,7 @@ Class | Method | HTTP request | Description
 *PortalApi.BuildsApi* | [**buildsUpdate**](docs/BuildsApi.md#buildsUpdate) | **PUT** /builds/{id}/ | 
 *PortalApi.GetBasicsByLoginApi* | [**getBasicsByLoginList**](docs/GetBasicsByLoginApi.md#getBasicsByLoginList) | **GET** /get-basics-by-login/ | 
 *PortalApi.GetBuildListApi* | [**getBuildListList**](docs/GetBuildListApi.md#getBuildListList) | **GET** /get-build-list/ | 
+*PortalApi.GetBuildReportsApi* | [**getBuildReportsList**](docs/GetBuildReportsApi.md#getBuildReportsList) | **GET** /get-build-reports/ | 
 *PortalApi.GetOrgNamesApi* | [**getOrgNamesList**](docs/GetOrgNamesApi.md#getOrgNamesList) | **GET** /get-org-names/ | 
 *PortalApi.GetPiNamesApi* | [**getPiNamesList**](docs/GetPiNamesApi.md#getPiNamesList) | **GET** /get-pi-names/ | 
 *PortalApi.OfficeHoursSignInsApi* | [**officeHoursSignInsCreate**](docs/OfficeHoursSignInsApi.md#officeHoursSignInsCreate) | **POST** /office-hours-sign-ins/ | 
@@ -164,6 +165,7 @@ Class | Method | HTTP request | Description
  - [PortalApi.AppTag](docs/AppTag.md)
  - [PortalApi.Build](docs/Build.md)
  - [PortalApi.BuildList](docs/BuildList.md)
+ - [PortalApi.BuildReports](docs/BuildReports.md)
  - [PortalApi.BuildStack](docs/BuildStack.md)
  - [PortalApi.GetBasicsByLogin](docs/GetBasicsByLogin.md)
  - [PortalApi.GetOrgNames](docs/GetOrgNames.md)

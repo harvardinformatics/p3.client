@@ -17,12 +17,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/App', 'model/AppTag', 'model/Build', 'model/BuildList', 'model/BuildStack', 'model/GetBasicsByLogin', 'model/GetOrgNames', 'model/GetPiNames', 'model/InlineResponse200', 'model/InlineResponse2001', 'model/InlineResponse2002', 'model/InlineResponse2003', 'model/InlineResponse2004', 'model/OfficeHoursSignIn', 'api/AppTagsApi', 'api/AppsApi', 'api/BuildStacksApi', 'api/BuildsApi', 'api/GetBasicsByLoginApi', 'api/GetBuildListApi', 'api/GetOrgNamesApi', 'api/GetPiNamesApi', 'api/OfficeHoursSignInsApi'], factory);
+    define(['ApiClient', 'model/App', 'model/AppTag', 'model/Build', 'model/BuildList', 'model/BuildReports', 'model/BuildStack', 'model/GetBasicsByLogin', 'model/GetOrgNames', 'model/GetPiNames', 'model/InlineResponse200', 'model/InlineResponse2001', 'model/InlineResponse2002', 'model/InlineResponse2003', 'model/InlineResponse2004', 'model/OfficeHoursSignIn', 'api/AppTagsApi', 'api/AppsApi', 'api/BuildStacksApi', 'api/BuildsApi', 'api/GetBasicsByLoginApi', 'api/GetBuildListApi', 'api/GetBuildReportsApi', 'api/GetOrgNamesApi', 'api/GetPiNamesApi', 'api/OfficeHoursSignInsApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/App'), require('./model/AppTag'), require('./model/Build'), require('./model/BuildList'), require('./model/BuildStack'), require('./model/GetBasicsByLogin'), require('./model/GetOrgNames'), require('./model/GetPiNames'), require('./model/InlineResponse200'), require('./model/InlineResponse2001'), require('./model/InlineResponse2002'), require('./model/InlineResponse2003'), require('./model/InlineResponse2004'), require('./model/OfficeHoursSignIn'), require('./api/AppTagsApi'), require('./api/AppsApi'), require('./api/BuildStacksApi'), require('./api/BuildsApi'), require('./api/GetBasicsByLoginApi'), require('./api/GetBuildListApi'), require('./api/GetOrgNamesApi'), require('./api/GetPiNamesApi'), require('./api/OfficeHoursSignInsApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/App'), require('./model/AppTag'), require('./model/Build'), require('./model/BuildList'), require('./model/BuildReports'), require('./model/BuildStack'), require('./model/GetBasicsByLogin'), require('./model/GetOrgNames'), require('./model/GetPiNames'), require('./model/InlineResponse200'), require('./model/InlineResponse2001'), require('./model/InlineResponse2002'), require('./model/InlineResponse2003'), require('./model/InlineResponse2004'), require('./model/OfficeHoursSignIn'), require('./api/AppTagsApi'), require('./api/AppsApi'), require('./api/BuildStacksApi'), require('./api/BuildsApi'), require('./api/GetBasicsByLoginApi'), require('./api/GetBuildListApi'), require('./api/GetBuildReportsApi'), require('./api/GetOrgNamesApi'), require('./api/GetPiNamesApi'), require('./api/OfficeHoursSignInsApi'));
   }
-}(function(ApiClient, App, AppTag, Build, BuildList, BuildStack, GetBasicsByLogin, GetOrgNames, GetPiNames, InlineResponse200, InlineResponse2001, InlineResponse2002, InlineResponse2003, InlineResponse2004, OfficeHoursSignIn, AppTagsApi, AppsApi, BuildStacksApi, BuildsApi, GetBasicsByLoginApi, GetBuildListApi, GetOrgNamesApi, GetPiNamesApi, OfficeHoursSignInsApi) {
+}(function(ApiClient, App, AppTag, Build, BuildList, BuildReports, BuildStack, GetBasicsByLogin, GetOrgNames, GetPiNames, InlineResponse200, InlineResponse2001, InlineResponse2002, InlineResponse2003, InlineResponse2004, OfficeHoursSignIn, AppTagsApi, AppsApi, BuildStacksApi, BuildsApi, GetBasicsByLoginApi, GetBuildListApi, GetBuildReportsApi, GetOrgNamesApi, GetPiNamesApi, OfficeHoursSignInsApi) {
   'use strict';
 
   /**
@@ -82,6 +82,11 @@
      * @property {module:model/BuildList}
      */
     BuildList: BuildList,
+    /**
+     * The BuildReports model constructor.
+     * @property {module:model/BuildReports}
+     */
+    BuildReports: BuildReports,
     /**
      * The BuildStack model constructor.
      * @property {module:model/BuildStack}
@@ -162,6 +167,11 @@
      * @property {module:api/GetBuildListApi}
      */
     GetBuildListApi: GetBuildListApi,
+    /**
+     * The GetBuildReportsApi service constructor.
+     * @property {module:api/GetBuildReportsApi}
+     */
+    GetBuildReportsApi: GetBuildReportsApi,
     /**
      * The GetOrgNamesApi service constructor.
      * @property {module:api/GetOrgNamesApi}
