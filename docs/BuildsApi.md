@@ -114,7 +114,7 @@ null (empty response body)
 
 <a name="buildsList"></a>
 # **buildsList**
-> [Build] buildsList()
+> InlineResponse2003 buildsList(opts)
 
 
 
@@ -132,7 +132,13 @@ token.apiKey = 'YOUR API KEY';
 //token.apiKeyPrefix = 'Token';
 
 var apiInstance = new PortalApi.BuildsApi();
-apiInstance.buildsList().then(function(data) {
+
+var opts = { 
+  'page': 56, // Number | A page number within the paginated result set.
+  'pageSize': 56, // Number | Number of results to return per page.
+  'search': "search_example" // String | 
+};
+apiInstance.buildsList(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -141,11 +147,16 @@ apiInstance.buildsList().then(function(data) {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Number**| A page number within the paginated result set. | [optional] 
+ **pageSize** | **Number**| Number of results to return per page. | [optional] 
+ **search** | **String**|  | [optional] 
 
 ### Return type
 
-[**[Build]**](Build.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 

@@ -166,6 +166,11 @@ Class | Method | HTTP request | Description
  - [PortalApi.GetBasicsByLogin](docs/GetBasicsByLogin.md)
  - [PortalApi.GetOrgNames](docs/GetOrgNames.md)
  - [PortalApi.GetPiNames](docs/GetPiNames.md)
+ - [PortalApi.InlineResponse200](docs/InlineResponse200.md)
+ - [PortalApi.InlineResponse2001](docs/InlineResponse2001.md)
+ - [PortalApi.InlineResponse2002](docs/InlineResponse2002.md)
+ - [PortalApi.InlineResponse2003](docs/InlineResponse2003.md)
+ - [PortalApi.InlineResponse2004](docs/InlineResponse2004.md)
  - [PortalApi.OfficeHoursSignIn](docs/OfficeHoursSignIn.md)
 
 

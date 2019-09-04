@@ -114,7 +114,7 @@ null (empty response body)
 
 <a name="officeHoursSignInsList"></a>
 # **officeHoursSignInsList**
-> [OfficeHoursSignIn] officeHoursSignInsList()
+> InlineResponse2004 officeHoursSignInsList(opts)
 
 
 
@@ -132,7 +132,12 @@ token.apiKey = 'YOUR API KEY';
 //token.apiKeyPrefix = 'Token';
 
 var apiInstance = new PortalApi.OfficeHoursSignInsApi();
-apiInstance.officeHoursSignInsList().then(function(data) {
+
+var opts = { 
+  'page': 56, // Number | A page number within the paginated result set.
+  'pageSize': 56 // Number | Number of results to return per page.
+};
+apiInstance.officeHoursSignInsList(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -141,11 +146,15 @@ apiInstance.officeHoursSignInsList().then(function(data) {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Number**| A page number within the paginated result set. | [optional] 
+ **pageSize** | **Number**| Number of results to return per page. | [optional] 
 
 ### Return type
 
-[**[OfficeHoursSignIn]**](OfficeHoursSignIn.md)
+[**InlineResponse2004**](InlineResponse2004.md)
 
 ### Authorization
 

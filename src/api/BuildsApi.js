@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Build'], factory);
+    define(['ApiClient', 'model/Build', 'model/InlineResponse2003'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Build'));
+    module.exports = factory(require('../ApiClient'), require('../model/Build'), require('../model/InlineResponse2003'));
   } else {
     // Browser globals (root is window)
     if (!root.PortalApi) {
       root.PortalApi = {};
     }
-    root.PortalApi.BuildsApi = factory(root.PortalApi.ApiClient, root.PortalApi.Build);
+    root.PortalApi.BuildsApi = factory(root.PortalApi.ApiClient, root.PortalApi.Build, root.PortalApi.InlineResponse2003);
   }
-}(this, function(ApiClient, Build) {
+}(this, function(ApiClient, Build, InlineResponse2003) {
   'use strict';
 
   /**
@@ -152,15 +152,23 @@
 
     /**
      * ViewSet for Builds
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Build>} and HTTP response
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.page A page number within the paginated result set.
+     * @param {Number} opts.pageSize Number of results to return per page.
+     * @param {String} opts.search 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2003} and HTTP response
      */
-    this.buildsListWithHttpInfo = function() {
+    this.buildsListWithHttpInfo = function(opts) {
+      opts = opts || {};
       var postBody = null;
 
 
       var pathParams = {
       };
       var queryParams = {
+        'page': opts['page'],
+        'page_size': opts['pageSize'],
+        'search': opts['search'],
       };
       var collectionQueryParams = {
       };
@@ -172,7 +180,7 @@
       var authNames = ['token'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = [Build];
+      var returnType = InlineResponse2003;
 
       return this.apiClient.callApi(
         '/builds/', 'GET',
@@ -183,10 +191,14 @@
 
     /**
      * ViewSet for Builds
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Build>}
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.page A page number within the paginated result set.
+     * @param {Number} opts.pageSize Number of results to return per page.
+     * @param {String} opts.search 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2003}
      */
-    this.buildsList = function() {
-      return this.buildsListWithHttpInfo()
+    this.buildsList = function(opts) {
+      return this.buildsListWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

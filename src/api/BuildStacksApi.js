@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/BuildStack'], factory);
+    define(['ApiClient', 'model/BuildStack', 'model/InlineResponse2002'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/BuildStack'));
+    module.exports = factory(require('../ApiClient'), require('../model/BuildStack'), require('../model/InlineResponse2002'));
   } else {
     // Browser globals (root is window)
     if (!root.PortalApi) {
       root.PortalApi = {};
     }
-    root.PortalApi.BuildStacksApi = factory(root.PortalApi.ApiClient, root.PortalApi.BuildStack);
+    root.PortalApi.BuildStacksApi = factory(root.PortalApi.ApiClient, root.PortalApi.BuildStack, root.PortalApi.InlineResponse2002);
   }
-}(this, function(ApiClient, BuildStack) {
+}(this, function(ApiClient, BuildStack, InlineResponse2002) {
   'use strict';
 
   /**
@@ -152,15 +152,21 @@
 
     /**
      * ViewSet for BuildStacks
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/BuildStack>} and HTTP response
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.page A page number within the paginated result set.
+     * @param {Number} opts.pageSize Number of results to return per page.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2002} and HTTP response
      */
-    this.buildStacksListWithHttpInfo = function() {
+    this.buildStacksListWithHttpInfo = function(opts) {
+      opts = opts || {};
       var postBody = null;
 
 
       var pathParams = {
       };
       var queryParams = {
+        'page': opts['page'],
+        'page_size': opts['pageSize'],
       };
       var collectionQueryParams = {
       };
@@ -172,7 +178,7 @@
       var authNames = ['token'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = [BuildStack];
+      var returnType = InlineResponse2002;
 
       return this.apiClient.callApi(
         '/build-stacks/', 'GET',
@@ -183,10 +189,13 @@
 
     /**
      * ViewSet for BuildStacks
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/BuildStack>}
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.page A page number within the paginated result set.
+     * @param {Number} opts.pageSize Number of results to return per page.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2002}
      */
-    this.buildStacksList = function() {
-      return this.buildStacksListWithHttpInfo()
+    this.buildStacksList = function(opts) {
+      return this.buildStacksListWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -114,7 +114,7 @@ null (empty response body)
 
 <a name="appsList"></a>
 # **appsList**
-> [App] appsList()
+> InlineResponse2001 appsList(opts)
 
 
 
@@ -132,7 +132,12 @@ token.apiKey = 'YOUR API KEY';
 //token.apiKeyPrefix = 'Token';
 
 var apiInstance = new PortalApi.AppsApi();
-apiInstance.appsList().then(function(data) {
+
+var opts = { 
+  'page': 56, // Number | A page number within the paginated result set.
+  'pageSize': 56 // Number | Number of results to return per page.
+};
+apiInstance.appsList(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -141,11 +146,15 @@ apiInstance.appsList().then(function(data) {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Number**| A page number within the paginated result set. | [optional] 
+ **pageSize** | **Number**| Number of results to return per page. | [optional] 
 
 ### Return type
 
-[**[App]**](App.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 

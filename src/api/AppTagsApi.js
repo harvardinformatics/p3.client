@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AppTag'], factory);
+    define(['ApiClient', 'model/AppTag', 'model/InlineResponse200'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AppTag'));
+    module.exports = factory(require('../ApiClient'), require('../model/AppTag'), require('../model/InlineResponse200'));
   } else {
     // Browser globals (root is window)
     if (!root.PortalApi) {
       root.PortalApi = {};
     }
-    root.PortalApi.AppTagsApi = factory(root.PortalApi.ApiClient, root.PortalApi.AppTag);
+    root.PortalApi.AppTagsApi = factory(root.PortalApi.ApiClient, root.PortalApi.AppTag, root.PortalApi.InlineResponse200);
   }
-}(this, function(ApiClient, AppTag) {
+}(this, function(ApiClient, AppTag, InlineResponse200) {
   'use strict';
 
   /**
@@ -152,15 +152,21 @@
 
     /**
      * ViewSet for AppTags
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AppTag>} and HTTP response
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.page A page number within the paginated result set.
+     * @param {Number} opts.pageSize Number of results to return per page.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse200} and HTTP response
      */
-    this.appTagsListWithHttpInfo = function() {
+    this.appTagsListWithHttpInfo = function(opts) {
+      opts = opts || {};
       var postBody = null;
 
 
       var pathParams = {
       };
       var queryParams = {
+        'page': opts['page'],
+        'page_size': opts['pageSize'],
       };
       var collectionQueryParams = {
       };
@@ -172,7 +178,7 @@
       var authNames = ['token'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = [AppTag];
+      var returnType = InlineResponse200;
 
       return this.apiClient.callApi(
         '/app-tags/', 'GET',
@@ -183,10 +189,13 @@
 
     /**
      * ViewSet for AppTags
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/AppTag>}
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.page A page number within the paginated result set.
+     * @param {Number} opts.pageSize Number of results to return per page.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse200}
      */
-    this.appTagsList = function() {
-      return this.appTagsListWithHttpInfo()
+    this.appTagsList = function(opts) {
+      return this.appTagsListWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

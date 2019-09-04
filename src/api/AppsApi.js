@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/App'], factory);
+    define(['ApiClient', 'model/App', 'model/InlineResponse2001'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/App'));
+    module.exports = factory(require('../ApiClient'), require('../model/App'), require('../model/InlineResponse2001'));
   } else {
     // Browser globals (root is window)
     if (!root.PortalApi) {
       root.PortalApi = {};
     }
-    root.PortalApi.AppsApi = factory(root.PortalApi.ApiClient, root.PortalApi.App);
+    root.PortalApi.AppsApi = factory(root.PortalApi.ApiClient, root.PortalApi.App, root.PortalApi.InlineResponse2001);
   }
-}(this, function(ApiClient, App) {
+}(this, function(ApiClient, App, InlineResponse2001) {
   'use strict';
 
   /**
@@ -152,15 +152,21 @@
 
     /**
      * ViewSet for Apps
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/App>} and HTTP response
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.page A page number within the paginated result set.
+     * @param {Number} opts.pageSize Number of results to return per page.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
      */
-    this.appsListWithHttpInfo = function() {
+    this.appsListWithHttpInfo = function(opts) {
+      opts = opts || {};
       var postBody = null;
 
 
       var pathParams = {
       };
       var queryParams = {
+        'page': opts['page'],
+        'page_size': opts['pageSize'],
       };
       var collectionQueryParams = {
       };
@@ -172,7 +178,7 @@
       var authNames = ['token'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = [App];
+      var returnType = InlineResponse2001;
 
       return this.apiClient.callApi(
         '/apps/', 'GET',
@@ -183,10 +189,13 @@
 
     /**
      * ViewSet for Apps
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/App>}
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.page A page number within the paginated result set.
+     * @param {Number} opts.pageSize Number of results to return per page.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
      */
-    this.appsList = function() {
-      return this.appsListWithHttpInfo()
+    this.appsList = function(opts) {
+      return this.appsListWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

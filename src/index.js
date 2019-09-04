@@ -17,12 +17,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/App', 'model/AppTag', 'model/Build', 'model/BuildStack', 'model/GetBasicsByLogin', 'model/GetOrgNames', 'model/GetPiNames', 'model/OfficeHoursSignIn', 'api/AppTagsApi', 'api/AppsApi', 'api/BuildStacksApi', 'api/BuildsApi', 'api/GetBasicsByLoginApi', 'api/GetOrgNamesApi', 'api/GetPiNamesApi', 'api/OfficeHoursSignInsApi'], factory);
+    define(['ApiClient', 'model/App', 'model/AppTag', 'model/Build', 'model/BuildStack', 'model/GetBasicsByLogin', 'model/GetOrgNames', 'model/GetPiNames', 'model/InlineResponse200', 'model/InlineResponse2001', 'model/InlineResponse2002', 'model/InlineResponse2003', 'model/InlineResponse2004', 'model/OfficeHoursSignIn', 'api/AppTagsApi', 'api/AppsApi', 'api/BuildStacksApi', 'api/BuildsApi', 'api/GetBasicsByLoginApi', 'api/GetOrgNamesApi', 'api/GetPiNamesApi', 'api/OfficeHoursSignInsApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/App'), require('./model/AppTag'), require('./model/Build'), require('./model/BuildStack'), require('./model/GetBasicsByLogin'), require('./model/GetOrgNames'), require('./model/GetPiNames'), require('./model/OfficeHoursSignIn'), require('./api/AppTagsApi'), require('./api/AppsApi'), require('./api/BuildStacksApi'), require('./api/BuildsApi'), require('./api/GetBasicsByLoginApi'), require('./api/GetOrgNamesApi'), require('./api/GetPiNamesApi'), require('./api/OfficeHoursSignInsApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/App'), require('./model/AppTag'), require('./model/Build'), require('./model/BuildStack'), require('./model/GetBasicsByLogin'), require('./model/GetOrgNames'), require('./model/GetPiNames'), require('./model/InlineResponse200'), require('./model/InlineResponse2001'), require('./model/InlineResponse2002'), require('./model/InlineResponse2003'), require('./model/InlineResponse2004'), require('./model/OfficeHoursSignIn'), require('./api/AppTagsApi'), require('./api/AppsApi'), require('./api/BuildStacksApi'), require('./api/BuildsApi'), require('./api/GetBasicsByLoginApi'), require('./api/GetOrgNamesApi'), require('./api/GetPiNamesApi'), require('./api/OfficeHoursSignInsApi'));
   }
-}(function(ApiClient, App, AppTag, Build, BuildStack, GetBasicsByLogin, GetOrgNames, GetPiNames, OfficeHoursSignIn, AppTagsApi, AppsApi, BuildStacksApi, BuildsApi, GetBasicsByLoginApi, GetOrgNamesApi, GetPiNamesApi, OfficeHoursSignInsApi) {
+}(function(ApiClient, App, AppTag, Build, BuildStack, GetBasicsByLogin, GetOrgNames, GetPiNames, InlineResponse200, InlineResponse2001, InlineResponse2002, InlineResponse2003, InlineResponse2004, OfficeHoursSignIn, AppTagsApi, AppsApi, BuildStacksApi, BuildsApi, GetBasicsByLoginApi, GetOrgNamesApi, GetPiNamesApi, OfficeHoursSignInsApi) {
   'use strict';
 
   /**
@@ -97,6 +97,31 @@
      * @property {module:model/GetPiNames}
      */
     GetPiNames: GetPiNames,
+    /**
+     * The InlineResponse200 model constructor.
+     * @property {module:model/InlineResponse200}
+     */
+    InlineResponse200: InlineResponse200,
+    /**
+     * The InlineResponse2001 model constructor.
+     * @property {module:model/InlineResponse2001}
+     */
+    InlineResponse2001: InlineResponse2001,
+    /**
+     * The InlineResponse2002 model constructor.
+     * @property {module:model/InlineResponse2002}
+     */
+    InlineResponse2002: InlineResponse2002,
+    /**
+     * The InlineResponse2003 model constructor.
+     * @property {module:model/InlineResponse2003}
+     */
+    InlineResponse2003: InlineResponse2003,
+    /**
+     * The InlineResponse2004 model constructor.
+     * @property {module:model/InlineResponse2004}
+     */
+    InlineResponse2004: InlineResponse2004,
     /**
      * The OfficeHoursSignIn model constructor.
      * @property {module:model/OfficeHoursSignIn}
