@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/BuildReportText'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./BuildReportText'));
   } else {
     // Browser globals (root is window)
     if (!root.PortalApi) {
       root.PortalApi = {};
     }
-    root.PortalApi.BuildReports = factory(root.PortalApi.ApiClient);
+    root.PortalApi.BuildReports = factory(root.PortalApi.ApiClient, root.PortalApi.BuildReportText);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, BuildReportText) {
   'use strict';
 
 
@@ -44,15 +44,13 @@
    * Constructs a new <code>BuildReports</code>.
    * @alias module:model/BuildReports
    * @class
+   * @param reportText {module:model/BuildReportText} 
    */
-  var exports = function() {
+  var exports = function(reportText) {
     var _this = this;
 
 
-
-
-
-
+    _this['report_text'] = reportText;
 
   };
 
@@ -70,20 +68,11 @@
       if (data.hasOwnProperty('app_name')) {
         obj['app_name'] = ApiClient.convertToType(data['app_name'], 'String');
       }
-      if (data.hasOwnProperty('build_stack_name')) {
-        obj['build_stack_name'] = ApiClient.convertToType(data['build_stack_name'], 'String');
-      }
-      if (data.hasOwnProperty('build_name')) {
-        obj['build_name'] = ApiClient.convertToType(data['build_name'], 'String');
-      }
-      if (data.hasOwnProperty('build_order')) {
-        obj['build_order'] = ApiClient.convertToType(data['build_order'], 'String');
-      }
       if (data.hasOwnProperty('report_text')) {
-        obj['report_text'] = ApiClient.convertToType(data['report_text'], 'String');
+        obj['report_text'] = BuildReportText.constructFromObject(data['report_text']);
       }
-      if (data.hasOwnProperty('deployment_toooling')) {
-        obj['deployment_toooling'] = ApiClient.convertToType(data['deployment_toooling'], 'String');
+      if (data.hasOwnProperty('deployment_tooling')) {
+        obj['deployment_tooling'] = ApiClient.convertToType(data['deployment_tooling'], 'String');
       }
     }
     return obj;
@@ -94,25 +83,13 @@
    */
   exports.prototype['app_name'] = undefined;
   /**
-   * @member {String} build_stack_name
-   */
-  exports.prototype['build_stack_name'] = undefined;
-  /**
-   * @member {String} build_name
-   */
-  exports.prototype['build_name'] = undefined;
-  /**
-   * @member {String} build_order
-   */
-  exports.prototype['build_order'] = undefined;
-  /**
-   * @member {String} report_text
+   * @member {module:model/BuildReportText} report_text
    */
   exports.prototype['report_text'] = undefined;
   /**
-   * @member {String} deployment_toooling
+   * @member {String} deployment_tooling
    */
-  exports.prototype['deployment_toooling'] = undefined;
+  exports.prototype['deployment_tooling'] = undefined;
 
 
 
