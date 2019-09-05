@@ -12,10 +12,12 @@ Name | Type | Description | Notes
 **isLatest** | **Boolean** |  | [optional] 
 **appName** | **String** |  | [optional] 
 **buildStack** | **String** |  | [optional] 
+**buildStackRank** | **Number** |  | [optional] 
 **buildDependencies** | **[String]** |  | [optional] 
 **runDependencies** | **[String]** |  | [optional] 
 **buildDate** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
+**preferredBuild** | **Boolean** |  | [optional] 
 
 

@@ -62,6 +62,8 @@
 
 
 
+
+
   };
 
   /**
@@ -102,6 +104,9 @@
       if (data.hasOwnProperty('build_stack')) {
         obj['build_stack'] = ApiClient.convertToType(data['build_stack'], 'String');
       }
+      if (data.hasOwnProperty('build_stack_rank')) {
+        obj['build_stack_rank'] = ApiClient.convertToType(data['build_stack_rank'], 'Number');
+      }
       if (data.hasOwnProperty('build_dependencies')) {
         obj['build_dependencies'] = ApiClient.convertToType(data['build_dependencies'], ['String']);
       }
@@ -116,6 +121,9 @@
       }
       if (data.hasOwnProperty('description')) {
         obj['description'] = ApiClient.convertToType(data['description'], 'String');
+      }
+      if (data.hasOwnProperty('preferred_build')) {
+        obj['preferred_build'] = ApiClient.convertToType(data['preferred_build'], 'Boolean');
       }
     }
     return obj;
@@ -158,6 +166,10 @@
    */
   exports.prototype['build_stack'] = undefined;
   /**
+   * @member {Number} build_stack_rank
+   */
+  exports.prototype['build_stack_rank'] = undefined;
+  /**
    * @member {Array.<String>} build_dependencies
    */
   exports.prototype['build_dependencies'] = undefined;
@@ -177,6 +189,10 @@
    * @member {String} description
    */
   exports.prototype['description'] = undefined;
+  /**
+   * @member {Boolean} preferred_build
+   */
+  exports.prototype['preferred_build'] = undefined;
 
 
 
