@@ -165,7 +165,6 @@ Class | Method | HTTP request | Description
  - [PortalApi.AppTag](docs/AppTag.md)
  - [PortalApi.Build](docs/Build.md)
  - [PortalApi.BuildList](docs/BuildList.md)
- - [PortalApi.BuildReportText](docs/BuildReportText.md)
  - [PortalApi.BuildReports](docs/BuildReports.md)
  - [PortalApi.BuildStack](docs/BuildStack.md)
  - [PortalApi.GetBasicsByLogin](docs/GetBasicsByLogin.md)
