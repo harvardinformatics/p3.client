@@ -114,7 +114,7 @@ null (empty response body)
 
 <a name="buildsList"></a>
 # **buildsList**
-> InlineResponse2003 buildsList(opts)
+> InlineResponse2002 buildsList(opts)
 
 
 
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 

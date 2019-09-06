@@ -114,7 +114,7 @@ null (empty response body)
 
 <a name="buildStacksList"></a>
 # **buildStacksList**
-> InlineResponse2002 buildStacksList(opts)
+> [BuildStack] buildStacksList()
 
 
 
@@ -132,12 +132,7 @@ token.apiKey = 'YOUR API KEY';
 //token.apiKeyPrefix = 'Token';
 
 var apiInstance = new PortalApi.BuildStacksApi();
-
-var opts = { 
-  'page': 56, // Number | A page number within the paginated result set.
-  'pageSize': 56 // Number | Number of results to return per page.
-};
-apiInstance.buildStacksList(opts).then(function(data) {
+apiInstance.buildStacksList().then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -146,15 +141,11 @@ apiInstance.buildStacksList(opts).then(function(data) {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **Number**| A page number within the paginated result set. | [optional] 
- **pageSize** | **Number**| Number of results to return per page. | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**[BuildStack]**](BuildStack.md)
 
 ### Authorization
 

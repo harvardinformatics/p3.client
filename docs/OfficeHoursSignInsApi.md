@@ -114,7 +114,7 @@ null (empty response body)
 
 <a name="officeHoursSignInsList"></a>
 # **officeHoursSignInsList**
-> InlineResponse2004 officeHoursSignInsList(opts)
+> InlineResponse2003 officeHoursSignInsList(opts)
 
 
 
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 

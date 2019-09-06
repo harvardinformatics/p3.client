@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/BuildStack'], factory);
+    define(['ApiClient', 'model/Build'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./BuildStack'));
+    module.exports = factory(require('../ApiClient'), require('./Build'));
   } else {
     // Browser globals (root is window)
     if (!root.PortalApi) {
       root.PortalApi = {};
     }
-    root.PortalApi.InlineResponse2002 = factory(root.PortalApi.ApiClient, root.PortalApi.BuildStack);
+    root.PortalApi.InlineResponse2002 = factory(root.PortalApi.ApiClient, root.PortalApi.Build);
   }
-}(this, function(ApiClient, BuildStack) {
+}(this, function(ApiClient, Build) {
   'use strict';
 
 
@@ -45,7 +45,7 @@
    * @alias module:model/InlineResponse2002
    * @class
    * @param count {Number} 
-   * @param results {Array.<module:model/BuildStack>} 
+   * @param results {Array.<module:model/Build>} 
    */
   var exports = function(count, results) {
     var _this = this;
@@ -77,7 +77,7 @@
         obj['previous'] = ApiClient.convertToType(data['previous'], 'String');
       }
       if (data.hasOwnProperty('results')) {
-        obj['results'] = ApiClient.convertToType(data['results'], [BuildStack]);
+        obj['results'] = ApiClient.convertToType(data['results'], [Build]);
       }
     }
     return obj;
@@ -96,7 +96,7 @@
    */
   exports.prototype['previous'] = undefined;
   /**
-   * @member {Array.<module:model/BuildStack>} results
+   * @member {Array.<module:model/Build>} results
    */
   exports.prototype['results'] = undefined;
 

@@ -6,6 +6,6 @@ Name | Type | Description | Notes
 **count** | **Number** |  | 
 **next** | **String** |  | [optional] 
 **previous** | **String** |  | [optional] 
-**results** | [**[Build]**](Build.md) |  | 
+**results** | [**[OfficeHoursSignIn]**](OfficeHoursSignIn.md) |  | 
 
 

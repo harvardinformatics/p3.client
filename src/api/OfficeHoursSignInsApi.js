@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse2004', 'model/OfficeHoursSignIn'], factory);
+    define(['ApiClient', 'model/InlineResponse2003', 'model/OfficeHoursSignIn'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/InlineResponse2004'), require('../model/OfficeHoursSignIn'));
+    module.exports = factory(require('../ApiClient'), require('../model/InlineResponse2003'), require('../model/OfficeHoursSignIn'));
   } else {
     // Browser globals (root is window)
     if (!root.PortalApi) {
       root.PortalApi = {};
     }
-    root.PortalApi.OfficeHoursSignInsApi = factory(root.PortalApi.ApiClient, root.PortalApi.InlineResponse2004, root.PortalApi.OfficeHoursSignIn);
+    root.PortalApi.OfficeHoursSignInsApi = factory(root.PortalApi.ApiClient, root.PortalApi.InlineResponse2003, root.PortalApi.OfficeHoursSignIn);
   }
-}(this, function(ApiClient, InlineResponse2004, OfficeHoursSignIn) {
+}(this, function(ApiClient, InlineResponse2003, OfficeHoursSignIn) {
   'use strict';
 
   /**
@@ -155,7 +155,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page A page number within the paginated result set.
      * @param {Number} opts.pageSize Number of results to return per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2004} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2003} and HTTP response
      */
     this.officeHoursSignInsListWithHttpInfo = function(opts) {
       opts = opts || {};
@@ -178,7 +178,7 @@
       var authNames = ['token'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse2004;
+      var returnType = InlineResponse2003;
 
       return this.apiClient.callApi(
         '/office-hours-sign-ins/', 'GET',
@@ -192,7 +192,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page A page number within the paginated result set.
      * @param {Number} opts.pageSize Number of results to return per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2004}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2003}
      */
     this.officeHoursSignInsList = function(opts) {
       return this.officeHoursSignInsListWithHttpInfo(opts)

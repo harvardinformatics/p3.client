@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Build'], factory);
+    define(['ApiClient', 'model/OfficeHoursSignIn'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Build'));
+    module.exports = factory(require('../ApiClient'), require('./OfficeHoursSignIn'));
   } else {
     // Browser globals (root is window)
     if (!root.PortalApi) {
       root.PortalApi = {};
     }
-    root.PortalApi.InlineResponse2003 = factory(root.PortalApi.ApiClient, root.PortalApi.Build);
+    root.PortalApi.InlineResponse2003 = factory(root.PortalApi.ApiClient, root.PortalApi.OfficeHoursSignIn);
   }
-}(this, function(ApiClient, Build) {
+}(this, function(ApiClient, OfficeHoursSignIn) {
   'use strict';
 
 
@@ -45,7 +45,7 @@
    * @alias module:model/InlineResponse2003
    * @class
    * @param count {Number} 
-   * @param results {Array.<module:model/Build>} 
+   * @param results {Array.<module:model/OfficeHoursSignIn>} 
    */
   var exports = function(count, results) {
     var _this = this;
@@ -77,7 +77,7 @@
         obj['previous'] = ApiClient.convertToType(data['previous'], 'String');
       }
       if (data.hasOwnProperty('results')) {
-        obj['results'] = ApiClient.convertToType(data['results'], [Build]);
+        obj['results'] = ApiClient.convertToType(data['results'], [OfficeHoursSignIn]);
       }
     }
     return obj;
@@ -96,7 +96,7 @@
    */
   exports.prototype['previous'] = undefined;
   /**
-   * @member {Array.<module:model/Build>} results
+   * @member {Array.<module:model/OfficeHoursSignIn>} results
    */
   exports.prototype['results'] = undefined;
 

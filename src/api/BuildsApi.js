@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Build', 'model/InlineResponse2003'], factory);
+    define(['ApiClient', 'model/Build', 'model/InlineResponse2002'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Build'), require('../model/InlineResponse2003'));
+    module.exports = factory(require('../ApiClient'), require('../model/Build'), require('../model/InlineResponse2002'));
   } else {
     // Browser globals (root is window)
     if (!root.PortalApi) {
       root.PortalApi = {};
     }
-    root.PortalApi.BuildsApi = factory(root.PortalApi.ApiClient, root.PortalApi.Build, root.PortalApi.InlineResponse2003);
+    root.PortalApi.BuildsApi = factory(root.PortalApi.ApiClient, root.PortalApi.Build, root.PortalApi.InlineResponse2002);
   }
-}(this, function(ApiClient, Build, InlineResponse2003) {
+}(this, function(ApiClient, Build, InlineResponse2002) {
   'use strict';
 
   /**
@@ -155,7 +155,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page A page number within the paginated result set.
      * @param {Number} opts.pageSize Number of results to return per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2003} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2002} and HTTP response
      */
     this.buildsListWithHttpInfo = function(opts) {
       opts = opts || {};
@@ -178,7 +178,7 @@
       var authNames = ['token'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse2003;
+      var returnType = InlineResponse2002;
 
       return this.apiClient.callApi(
         '/builds/', 'GET',
@@ -192,7 +192,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page A page number within the paginated result set.
      * @param {Number} opts.pageSize Number of results to return per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2003}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2002}
      */
     this.buildsList = function(opts) {
       return this.buildsListWithHttpInfo(opts)
