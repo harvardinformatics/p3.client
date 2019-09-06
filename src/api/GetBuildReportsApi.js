@@ -53,6 +53,7 @@
      * Retrieve build reports for list display
      * @param {Object} opts Optional parameters
      * @param {String} opts.search 
+     * @param {Number} opts.limit 
      * @param {String} opts.buildStacks Comma-separated list of build stack names (e.g. HeLmod CentOS 7)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/BuildReports>} and HTTP response
      */
@@ -65,6 +66,7 @@
       };
       var queryParams = {
         'search': opts['search'],
+        'limit': opts['limit'],
         'build_stacks': opts['buildStacks'],
       };
       var collectionQueryParams = {
@@ -90,6 +92,7 @@
      * Retrieve build reports for list display
      * @param {Object} opts Optional parameters
      * @param {String} opts.search 
+     * @param {Number} opts.limit 
      * @param {String} opts.buildStacks Comma-separated list of build stack names (e.g. HeLmod CentOS 7)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/BuildReports>}
      */
