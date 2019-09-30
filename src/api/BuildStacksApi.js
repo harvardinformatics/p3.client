@@ -151,7 +151,7 @@
 
 
     /**
-     * ViewSet for BuildStacks
+     * Just for swagger
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/BuildStack>} and HTTP response
      */
     this.buildStacksListWithHttpInfo = function() {
@@ -169,7 +169,7 @@
       var formParams = {
       };
 
-      var authNames = ['token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = [BuildStack];
@@ -182,7 +182,7 @@
     }
 
     /**
-     * ViewSet for BuildStacks
+     * Just for swagger
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/BuildStack>}
      */
     this.buildStacksList = function() {
@@ -252,7 +252,7 @@
 
 
     /**
-     * ViewSet for BuildStacks
+     * Just for swagger
      * @param {Number} id A unique integer value identifying this build stack.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BuildStack} and HTTP response
      */
@@ -277,7 +277,7 @@
       var formParams = {
       };
 
-      var authNames = ['token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = BuildStack;
@@ -290,7 +290,7 @@
     }
 
     /**
-     * ViewSet for BuildStacks
+     * Just for swagger
      * @param {Number} id A unique integer value identifying this build stack.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BuildStack}
      */

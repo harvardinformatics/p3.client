@@ -52,10 +52,12 @@
   var exports = function(name, os, osVersion, buildTooling) {
     var _this = this;
 
+
     _this['name'] = name;
     _this['os'] = os;
     _this['os_version'] = osVersion;
     _this['build_tooling'] = buildTooling;
+
 
   };
 
@@ -70,6 +72,9 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
+      }
       if (data.hasOwnProperty('name')) {
         obj['name'] = ApiClient.convertToType(data['name'], 'String');
       }
@@ -85,10 +90,17 @@
       if (data.hasOwnProperty('description')) {
         obj['description'] = ApiClient.convertToType(data['description'], 'String');
       }
+      if (data.hasOwnProperty('activation')) {
+        obj['activation'] = ApiClient.convertToType(data['activation'], 'String');
+      }
     }
     return obj;
   }
 
+  /**
+   * @member {Number} id
+   */
+  exports.prototype['id'] = undefined;
   /**
    * @member {String} name
    */
@@ -109,6 +121,11 @@
    * @member {String} description
    */
   exports.prototype['description'] = undefined;
+  /**
+   * How to activate the build stack, e.g. export MODULEPATH=/n/sw/eb/modulefiles/centos7/Core:$MODULEPATH
+   * @member {String} activation
+   */
+  exports.prototype['activation'] = undefined;
 
 
 

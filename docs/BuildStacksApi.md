@@ -118,18 +118,11 @@ null (empty response body)
 
 
 
-ViewSet for BuildStacks
+Just for swagger
 
 ### Example
 ```javascript
 var PortalApi = require('portal_api');
-var defaultClient = PortalApi.ApiClient.instance;
-
-// Configure API key authorization: token
-var token = defaultClient.authentications['token'];
-token.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//token.apiKeyPrefix = 'Token';
 
 var apiInstance = new PortalApi.BuildStacksApi();
 apiInstance.buildStacksList().then(function(data) {
@@ -149,7 +142,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[token](../README.md#token)
+No authorization required
 
 ### HTTP request headers
 
@@ -215,18 +208,11 @@ Name | Type | Description  | Notes
 
 
 
-ViewSet for BuildStacks
+Just for swagger
 
 ### Example
 ```javascript
 var PortalApi = require('portal_api');
-var defaultClient = PortalApi.ApiClient.instance;
-
-// Configure API key authorization: token
-var token = defaultClient.authentications['token'];
-token.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//token.apiKeyPrefix = 'Token';
 
 var apiInstance = new PortalApi.BuildStacksApi();
 
@@ -252,7 +238,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[token](../README.md#token)
+No authorization required
 
 ### HTTP request headers
 
