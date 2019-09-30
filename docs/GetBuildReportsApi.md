@@ -18,13 +18,6 @@ Retrieve build reports for list display
 ### Example
 ```javascript
 var PortalApi = require('portal_api');
-var defaultClient = PortalApi.ApiClient.instance;
-
-// Configure API key authorization: token
-var token = defaultClient.authentications['token'];
-token.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//token.apiKeyPrefix = 'Token';
 
 var apiInstance = new PortalApi.GetBuildReportsApi();
 
@@ -55,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[token](../README.md#token)
+No authorization required
 
 ### HTTP request headers
 

@@ -76,7 +76,7 @@
       var formParams = {
       };
 
-      var authNames = ['token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = [BuildReports];
