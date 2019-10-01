@@ -10,7 +10,9 @@ Name | Type | Description | Notes
 **comments** | **String** |  | [optional] 
 **buildOrder** | **Number** |  | [optional] 
 **isLatest** | **Boolean** |  | [optional] 
+**appId** | **Number** |  | [optional] 
 **appName** | **String** |  | [optional] 
+**appUrl** | **String** |  | [optional] 
 **buildStack** | **String** |  | [optional] 
 **buildStackRank** | **Number** |  | [optional] 
 **buildDependencies** | **[String]** |  | [optional] 
@@ -19,5 +21,6 @@ Name | Type | Description | Notes
 **title** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **preferredBuild** | **Boolean** |  | [optional] 
+**id** | **Number** |  | [optional] 
 
 

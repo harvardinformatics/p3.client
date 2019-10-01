@@ -64,6 +64,9 @@
 
 
 
+
+
+
   };
 
   /**
@@ -98,8 +101,14 @@
       if (data.hasOwnProperty('is_latest')) {
         obj['is_latest'] = ApiClient.convertToType(data['is_latest'], 'Boolean');
       }
+      if (data.hasOwnProperty('app_id')) {
+        obj['app_id'] = ApiClient.convertToType(data['app_id'], 'Number');
+      }
       if (data.hasOwnProperty('app_name')) {
         obj['app_name'] = ApiClient.convertToType(data['app_name'], 'String');
+      }
+      if (data.hasOwnProperty('app_url')) {
+        obj['app_url'] = ApiClient.convertToType(data['app_url'], 'String');
       }
       if (data.hasOwnProperty('build_stack')) {
         obj['build_stack'] = ApiClient.convertToType(data['build_stack'], 'String');
@@ -124,6 +133,9 @@
       }
       if (data.hasOwnProperty('preferred_build')) {
         obj['preferred_build'] = ApiClient.convertToType(data['preferred_build'], 'Boolean');
+      }
+      if (data.hasOwnProperty('id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
       }
     }
     return obj;
@@ -158,9 +170,17 @@
    */
   exports.prototype['is_latest'] = undefined;
   /**
+   * @member {Number} app_id
+   */
+  exports.prototype['app_id'] = undefined;
+  /**
    * @member {String} app_name
    */
   exports.prototype['app_name'] = undefined;
+  /**
+   * @member {String} app_url
+   */
+  exports.prototype['app_url'] = undefined;
   /**
    * @member {String} build_stack
    */
@@ -193,6 +213,10 @@
    * @member {Boolean} preferred_build
    */
   exports.prototype['preferred_build'] = undefined;
+  /**
+   * @member {Number} id
+   */
+  exports.prototype['id'] = undefined;
 
 
 
