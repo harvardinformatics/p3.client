@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **appUrl** | **String** |  | [optional] 
 **buildStack** | **String** |  | [optional] 
 **buildStackRank** | **Number** |  | [optional] 
+**buildStackActivation** | **String** |  | [optional] 
 **buildDependencies** | **[String]** |  | [optional] 
 **runDependencies** | **[String]** |  | [optional] 
 **buildDate** | **String** |  | [optional] 

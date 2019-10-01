@@ -67,6 +67,7 @@
 
 
 
+
   };
 
   /**
@@ -115,6 +116,9 @@
       }
       if (data.hasOwnProperty('build_stack_rank')) {
         obj['build_stack_rank'] = ApiClient.convertToType(data['build_stack_rank'], 'Number');
+      }
+      if (data.hasOwnProperty('build_stack_activation')) {
+        obj['build_stack_activation'] = ApiClient.convertToType(data['build_stack_activation'], 'String');
       }
       if (data.hasOwnProperty('build_dependencies')) {
         obj['build_dependencies'] = ApiClient.convertToType(data['build_dependencies'], ['String']);
@@ -189,6 +193,10 @@
    * @member {Number} build_stack_rank
    */
   exports.prototype['build_stack_rank'] = undefined;
+  /**
+   * @member {String} build_stack_activation
+   */
+  exports.prototype['build_stack_activation'] = undefined;
   /**
    * @member {Array.<String>} build_dependencies
    */
