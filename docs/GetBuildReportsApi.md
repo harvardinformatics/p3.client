@@ -24,6 +24,7 @@ var apiInstance = new PortalApi.GetBuildReportsApi();
 var opts = { 
   'search': "search_example", // String | 
   'limit': 56, // Number | 
+  'buildName': "buildName_example", // String | 
   'buildStacks': "buildStacks_example" // String | Comma-separated list of build stack names (e.g. HeLmod CentOS 7)
 };
 apiInstance.getBuildReportsList(opts).then(function(data) {
@@ -40,6 +41,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **search** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
+ **buildName** | **String**|  | [optional] 
  **buildStacks** | **String**| Comma-separated list of build stack names (e.g. HeLmod CentOS 7) | [optional] 
 
 ### Return type
