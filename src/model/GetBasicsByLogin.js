@@ -54,6 +54,9 @@
 
 
 
+
+
+
   };
 
   /**
@@ -85,6 +88,15 @@
       if (data.hasOwnProperty('department_name')) {
         obj['department_name'] = ApiClient.convertToType(data['department_name'], 'String');
       }
+      if (data.hasOwnProperty('department_code')) {
+        obj['department_code'] = ApiClient.convertToType(data['department_code'], 'String');
+      }
+      if (data.hasOwnProperty('department_id')) {
+        obj['department_id'] = ApiClient.convertToType(data['department_id'], 'String');
+      }
+      if (data.hasOwnProperty('department_slug')) {
+        obj['department_slug'] = ApiClient.convertToType(data['department_slug'], 'String');
+      }
     }
     return obj;
   }
@@ -113,6 +125,18 @@
    * @member {String} department_name
    */
   exports.prototype['department_name'] = undefined;
+  /**
+   * @member {String} department_code
+   */
+  exports.prototype['department_code'] = undefined;
+  /**
+   * @member {String} department_id
+   */
+  exports.prototype['department_id'] = undefined;
+  /**
+   * @member {String} department_slug
+   */
+  exports.prototype['department_slug'] = undefined;
 
 
 

@@ -9,5 +9,8 @@ Name | Type | Description | Notes
 **labName** | **String** |  | [optional] 
 **piFullName** | **String** |  | [optional] 
 **departmentName** | **String** |  | [optional] 
+**departmentCode** | **String** |  | [optional] 
+**departmentId** | **String** |  | [optional] 
+**departmentSlug** | **String** |  | [optional] 
 
 
