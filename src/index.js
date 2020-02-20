@@ -17,12 +17,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/App', 'model/AppTag', 'model/Build', 'model/BuildList', 'model/BuildReports', 'model/BuildStack', 'model/GetBasicsByLogin', 'model/GetOrgNames', 'model/GetPiNames', 'model/InlineResponse200', 'model/InlineResponse2001', 'model/InlineResponse2002', 'model/InlineResponse2003', 'model/OfficeHoursSignIn', 'api/AppTagsApi', 'api/AppsApi', 'api/BuildStacksApi', 'api/BuildsApi', 'api/GetBasicsByLoginApi', 'api/GetBuildListApi', 'api/GetBuildReportsApi', 'api/GetOrgNamesApi', 'api/GetPiNamesApi', 'api/OfficeHoursSignInsApi'], factory);
+    define(['ApiClient', 'model/App', 'model/AppTag', 'model/Build', 'model/BuildList', 'model/BuildReports', 'model/BuildStack', 'model/GetBasicsByLogin', 'model/GetOrgNames', 'model/GetPiNames', 'model/GetUserList', 'model/InlineResponse200', 'model/InlineResponse2001', 'model/InlineResponse2002', 'model/InlineResponse2003', 'model/OfficeHoursSignIn', 'api/AppTagsApi', 'api/AppsApi', 'api/BuildStacksApi', 'api/BuildsApi', 'api/GetBasicsByLoginApi', 'api/GetBuildListApi', 'api/GetBuildReportsApi', 'api/GetOrgNamesApi', 'api/GetPiNamesApi', 'api/GetUserListApi', 'api/OfficeHoursSignInsApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/App'), require('./model/AppTag'), require('./model/Build'), require('./model/BuildList'), require('./model/BuildReports'), require('./model/BuildStack'), require('./model/GetBasicsByLogin'), require('./model/GetOrgNames'), require('./model/GetPiNames'), require('./model/InlineResponse200'), require('./model/InlineResponse2001'), require('./model/InlineResponse2002'), require('./model/InlineResponse2003'), require('./model/OfficeHoursSignIn'), require('./api/AppTagsApi'), require('./api/AppsApi'), require('./api/BuildStacksApi'), require('./api/BuildsApi'), require('./api/GetBasicsByLoginApi'), require('./api/GetBuildListApi'), require('./api/GetBuildReportsApi'), require('./api/GetOrgNamesApi'), require('./api/GetPiNamesApi'), require('./api/OfficeHoursSignInsApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/App'), require('./model/AppTag'), require('./model/Build'), require('./model/BuildList'), require('./model/BuildReports'), require('./model/BuildStack'), require('./model/GetBasicsByLogin'), require('./model/GetOrgNames'), require('./model/GetPiNames'), require('./model/GetUserList'), require('./model/InlineResponse200'), require('./model/InlineResponse2001'), require('./model/InlineResponse2002'), require('./model/InlineResponse2003'), require('./model/OfficeHoursSignIn'), require('./api/AppTagsApi'), require('./api/AppsApi'), require('./api/BuildStacksApi'), require('./api/BuildsApi'), require('./api/GetBasicsByLoginApi'), require('./api/GetBuildListApi'), require('./api/GetBuildReportsApi'), require('./api/GetOrgNamesApi'), require('./api/GetPiNamesApi'), require('./api/GetUserListApi'), require('./api/OfficeHoursSignInsApi'));
   }
-}(function(ApiClient, App, AppTag, Build, BuildList, BuildReports, BuildStack, GetBasicsByLogin, GetOrgNames, GetPiNames, InlineResponse200, InlineResponse2001, InlineResponse2002, InlineResponse2003, OfficeHoursSignIn, AppTagsApi, AppsApi, BuildStacksApi, BuildsApi, GetBasicsByLoginApi, GetBuildListApi, GetBuildReportsApi, GetOrgNamesApi, GetPiNamesApi, OfficeHoursSignInsApi) {
+}(function(ApiClient, App, AppTag, Build, BuildList, BuildReports, BuildStack, GetBasicsByLogin, GetOrgNames, GetPiNames, GetUserList, InlineResponse200, InlineResponse2001, InlineResponse2002, InlineResponse2003, OfficeHoursSignIn, AppTagsApi, AppsApi, BuildStacksApi, BuildsApi, GetBasicsByLoginApi, GetBuildListApi, GetBuildReportsApi, GetOrgNamesApi, GetPiNamesApi, GetUserListApi, OfficeHoursSignInsApi) {
   'use strict';
 
   /**
@@ -108,6 +108,11 @@
      */
     GetPiNames: GetPiNames,
     /**
+     * The GetUserList model constructor.
+     * @property {module:model/GetUserList}
+     */
+    GetUserList: GetUserList,
+    /**
      * The InlineResponse200 model constructor.
      * @property {module:model/InlineResponse200}
      */
@@ -177,6 +182,11 @@
      * @property {module:api/GetPiNamesApi}
      */
     GetPiNamesApi: GetPiNamesApi,
+    /**
+     * The GetUserListApi service constructor.
+     * @property {module:api/GetUserListApi}
+     */
+    GetUserListApi: GetUserListApi,
     /**
      * The OfficeHoursSignInsApi service constructor.
      * @property {module:api/OfficeHoursSignInsApi}

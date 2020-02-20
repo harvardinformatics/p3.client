@@ -151,6 +151,7 @@ Class | Method | HTTP request | Description
 *PortalApi.GetBuildReportsApi* | [**getBuildReportsList**](docs/GetBuildReportsApi.md#getBuildReportsList) | **GET** /get-build-reports/ | 
 *PortalApi.GetOrgNamesApi* | [**getOrgNamesList**](docs/GetOrgNamesApi.md#getOrgNamesList) | **GET** /get-org-names/ | 
 *PortalApi.GetPiNamesApi* | [**getPiNamesList**](docs/GetPiNamesApi.md#getPiNamesList) | **GET** /get-pi-names/ | 
+*PortalApi.GetUserListApi* | [**getUserListList**](docs/GetUserListApi.md#getUserListList) | **GET** /get-user-list/ | 
 *PortalApi.OfficeHoursSignInsApi* | [**officeHoursSignInsCreate**](docs/OfficeHoursSignInsApi.md#officeHoursSignInsCreate) | **POST** /office-hours-sign-ins/ | 
 *PortalApi.OfficeHoursSignInsApi* | [**officeHoursSignInsDelete**](docs/OfficeHoursSignInsApi.md#officeHoursSignInsDelete) | **DELETE** /office-hours-sign-ins/{id}/ | 
 *PortalApi.OfficeHoursSignInsApi* | [**officeHoursSignInsList**](docs/OfficeHoursSignInsApi.md#officeHoursSignInsList) | **GET** /office-hours-sign-ins/ | 
@@ -170,6 +171,7 @@ Class | Method | HTTP request | Description
  - [PortalApi.GetBasicsByLogin](docs/GetBasicsByLogin.md)
  - [PortalApi.GetOrgNames](docs/GetOrgNames.md)
  - [PortalApi.GetPiNames](docs/GetPiNames.md)
+ - [PortalApi.GetUserList](docs/GetUserList.md)
  - [PortalApi.InlineResponse200](docs/InlineResponse200.md)
  - [PortalApi.InlineResponse2001](docs/InlineResponse2001.md)
  - [PortalApi.InlineResponse2002](docs/InlineResponse2002.md)
