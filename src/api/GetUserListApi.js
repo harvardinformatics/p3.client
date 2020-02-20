@@ -53,6 +53,9 @@
      * Return basic information (user full name, pi name, department, email ) given a search term.   Logins are in a list.
      * @param {Object} opts Optional parameters
      * @param {String} opts.search 
+     * @param {Number} opts.offset 
+     * @param {Number} opts.limit 
+     * @param {String} opts.orderBy 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/GetUserList>} and HTTP response
      */
     this.getUserListListWithHttpInfo = function(opts) {
@@ -64,6 +67,9 @@
       };
       var queryParams = {
         'search': opts['search'],
+        'offset': opts['offset'],
+        'limit': opts['limit'],
+        'order_by': opts['orderBy'],
       };
       var collectionQueryParams = {
       };
@@ -88,6 +94,9 @@
      * Return basic information (user full name, pi name, department, email ) given a search term.   Logins are in a list.
      * @param {Object} opts Optional parameters
      * @param {String} opts.search 
+     * @param {Number} opts.offset 
+     * @param {Number} opts.limit 
+     * @param {String} opts.orderBy 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/GetUserList>}
      */
     this.getUserListList = function(opts) {
