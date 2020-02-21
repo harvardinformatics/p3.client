@@ -54,6 +54,7 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.search 
      * @param {Number} opts.limit 
+     * @param {Number} opts.offset 
      * @param {String} opts.buildName 
      * @param {String} opts.appName 
      * @param {String} opts.buildStacks Comma-separated list of build stack names (e.g. HeLmod CentOS 7)
@@ -69,6 +70,7 @@
       var queryParams = {
         'search': opts['search'],
         'limit': opts['limit'],
+        'offset': opts['offset'],
         'build_name': opts['buildName'],
         'app_name': opts['appName'],
         'build_stacks': opts['buildStacks'],
@@ -97,6 +99,7 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.search 
      * @param {Number} opts.limit 
+     * @param {Number} opts.offset 
      * @param {String} opts.buildName 
      * @param {String} opts.appName 
      * @param {String} opts.buildStacks Comma-separated list of build stack names (e.g. HeLmod CentOS 7)

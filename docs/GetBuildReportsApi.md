@@ -24,6 +24,7 @@ var apiInstance = new PortalApi.GetBuildReportsApi();
 var opts = { 
   'search': "search_example", // String | 
   'limit': 56, // Number | 
+  'offset': 56, // Number | 
   'buildName': "buildName_example", // String | 
   'appName': "appName_example", // String | 
   'buildStacks': "buildStacks_example" // String | Comma-separated list of build stack names (e.g. HeLmod CentOS 7)
@@ -42,6 +43,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **search** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
+ **offset** | **Number**|  | [optional] 
  **buildName** | **String**|  | [optional] 
  **appName** | **String**|  | [optional] 
  **buildStacks** | **String**| Comma-separated list of build stack names (e.g. HeLmod CentOS 7) | [optional] 
