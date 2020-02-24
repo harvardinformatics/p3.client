@@ -54,6 +54,10 @@
 
 
 
+
+
+
+
   };
 
   /**
@@ -85,6 +89,18 @@
       if (data.hasOwnProperty('department_slug')) {
         obj['department_slug'] = ApiClient.convertToType(data['department_slug'], 'String');
       }
+      if (data.hasOwnProperty('person_enabled')) {
+        obj['person_enabled'] = ApiClient.convertToType(data['person_enabled'], 'Boolean');
+      }
+      if (data.hasOwnProperty('last_name')) {
+        obj['last_name'] = ApiClient.convertToType(data['last_name'], 'String');
+      }
+      if (data.hasOwnProperty('first_name')) {
+        obj['first_name'] = ApiClient.convertToType(data['first_name'], 'String');
+      }
+      if (data.hasOwnProperty('ifxid')) {
+        obj['ifxid'] = ApiClient.convertToType(data['ifxid'], 'String');
+      }
     }
     return obj;
   }
@@ -113,6 +129,22 @@
    * @member {String} department_slug
    */
   exports.prototype['department_slug'] = undefined;
+  /**
+   * @member {Boolean} person_enabled
+   */
+  exports.prototype['person_enabled'] = undefined;
+  /**
+   * @member {String} last_name
+   */
+  exports.prototype['last_name'] = undefined;
+  /**
+   * @member {String} first_name
+   */
+  exports.prototype['first_name'] = undefined;
+  /**
+   * @member {String} ifxid
+   */
+  exports.prototype['ifxid'] = undefined;
 
 
 

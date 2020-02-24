@@ -53,6 +53,7 @@
      * Return basic information (user full name, pi name, department, email ) given a search term.   Logins are in a list.
      * @param {Object} opts Optional parameters
      * @param {String} opts.search 
+     * @param {String} opts.orgTree 
      * @param {Number} opts.offset 
      * @param {Number} opts.limit 
      * @param {String} opts.orderBy 
@@ -67,6 +68,7 @@
       };
       var queryParams = {
         'search': opts['search'],
+        'org_tree': opts['orgTree'],
         'offset': opts['offset'],
         'limit': opts['limit'],
         'order_by': opts['orderBy'],
@@ -94,6 +96,7 @@
      * Return basic information (user full name, pi name, department, email ) given a search term.   Logins are in a list.
      * @param {Object} opts Optional parameters
      * @param {String} opts.search 
+     * @param {String} opts.orgTree 
      * @param {Number} opts.offset 
      * @param {Number} opts.limit 
      * @param {String} opts.orderBy 
