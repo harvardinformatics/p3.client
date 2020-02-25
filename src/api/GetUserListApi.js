@@ -54,6 +54,7 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.search 
      * @param {String} opts.orgTree 
+     * @param {Number} opts.includeDisabled 
      * @param {Number} opts.offset 
      * @param {Number} opts.limit 
      * @param {String} opts.orderBy 
@@ -69,6 +70,7 @@
       var queryParams = {
         'search': opts['search'],
         'org_tree': opts['orgTree'],
+        'include_disabled': opts['includeDisabled'],
         'offset': opts['offset'],
         'limit': opts['limit'],
         'order_by': opts['orderBy'],
@@ -97,6 +99,7 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.search 
      * @param {String} opts.orgTree 
+     * @param {Number} opts.includeDisabled 
      * @param {Number} opts.offset 
      * @param {Number} opts.limit 
      * @param {String} opts.orderBy 

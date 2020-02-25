@@ -31,6 +31,7 @@ var apiInstance = new PortalApi.GetUserListApi();
 var opts = { 
   'search': "search_example", // String | 
   'orgTree': "orgTree_example", // String | 
+  'includeDisabled': 56, // Number | 
   'offset': 56, // Number | 
   'limit': 56, // Number | 
   'orderBy': "orderBy_example" // String | 
@@ -49,6 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **search** | **String**|  | [optional] 
  **orgTree** | **String**|  | [optional] 
+ **includeDisabled** | **Number**|  | [optional] 
  **offset** | **Number**|  | [optional] 
  **limit** | **Number**|  | [optional] 
  **orderBy** | **String**|  | [optional] 
